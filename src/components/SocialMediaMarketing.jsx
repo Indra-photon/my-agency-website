@@ -157,7 +157,6 @@ const SocialMediaMarketing = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
     const videoRefs = useRef({});
-
     useEffect(() => {
         const fetchVideos = async () => {
             try {
@@ -174,6 +173,26 @@ const SocialMediaMarketing = () => {
 
         fetchVideos();
     }, []);
+
+    // useEffect(() => {
+    //     const checkDatabase = async () => {
+    //         try {
+    //             const result = await projectService.testDatabaseConnection();
+    //             console.log("Database test result:", result);
+                
+    //             if (!result.success) {
+    //                 console.error("Database connection issues:", result.message);
+    //                 // Handle the error in your UI
+    //             } else {
+    //                 console.log("Connected successfully to database. Found documents:", result.collections);
+    //             }
+    //         } catch (error) {
+    //             console.error("Failed to test database:", error);
+    //         }
+    //     };
+    
+    //     checkDatabase();
+    // }, []);
 
     
 

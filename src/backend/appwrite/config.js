@@ -1,8 +1,9 @@
 import conf from "./conf";
-import { Client, Databases, Storage, ID, Query } from "appwrite";
+import { Client, Account, Databases, Storage, ID, Query } from "appwrite";
 
 export class ProjectService {
     client = new Client();
+    account;
     databases;
     bucket;
 
@@ -10,6 +11,7 @@ export class ProjectService {
         this.client
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
+        this.account = new Account(this.client);
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client);
     }
@@ -335,6 +337,76 @@ export class ProjectService {
             throw error;
         }
     }
+
+    // Add this to your ProjectService class in the same file
+async testDatabaseConnection() {
+    try {
+        console.log("Testing Database Connection...");
+        console.log("Config values:", {
+            databaseId: conf.appwriteDatabaseId,
+            videoCollection: conf.collections.video,
+            photoCollection: conf.collections.photo
+        });
+
+        // Test if we can list documents from video collection
+        const videoTest = await this.databases.listDocuments(
+            conf.appwriteDatabaseId,
+            conf.collections.video,
+            [
+                Query.limit(1) // Just get one document to test
+            ]
+        );
+        console.log("Video collection test:", videoTest);
+
+        // Test if we can list documents from photo collection
+        const photoTest = await this.databases.listDocuments(
+            conf.appwriteDatabaseId,
+            conf.collections.photo,
+            [
+                Query.limit(1) // Just get one document to test
+            ]
+        );
+        console.log("Photo collection test:", photoTest);
+
+        return {
+            success: true,
+            message: "Database connection successful",
+            collections: {
+                video: videoTest.total,
+                photo: photoTest.total
+            }
+        };
+
+    } catch (error) {
+        console.error("Database Connection Test Failed:", {
+            error: error.message,
+            code: error.code,
+            type: error.type
+        });
+        
+        // Check for specific Appwrite errors
+        if (error.code === 401) {
+            return {
+                success: false,
+                message: "Authentication failed. Check your project ID and API keys."
+            };
+        } else if (error.code === 404) {
+            return {
+                success: false,
+                message: "Database or collection not found. Check your database and collection IDs."
+            };
+        }
+        
+        return {
+            success: false,
+            message: error.message,
+            errorDetails: {
+                code: error.code,
+                type: error.type
+            }
+        };
+    }
+}
 }
 
 const projectService = new ProjectService();
