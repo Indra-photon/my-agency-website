@@ -271,30 +271,30 @@ const WebsiteAnalyzer = () => {
       <Toaster position="top-right" />
 
       <form onSubmit={analyzeSite} className="space-y-4">
-        <div className="relative">
+        <div className="relative flex flex-col sm:flex-row gap-2">
           <input
             type="text"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            placeholder="Enter your website URL (e.g., https://example.com)"
-            className="w-full px-6 py-4 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            placeholder="Enter your website URL"
+            className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
             disabled={loading}
           />
           <button
             type="submit"
             disabled={loading || !url}
-            className="absolute right-2 top-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed animate-glow-blue"
+            className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {loading ? (
-              <span className="flex items-center gap-2">
+              <>
                 <Loader className="animate-spin" size={16} />
-                Analyzing...
-              </span>
+                <span>Analyzing...</span>
+              </>
             ) : (
-              <span className="flex items-center gap-2">
+              <>
                 <Search size={16} />
-                Analyze Site
-              </span>
+                <span>Analyze Site</span>
+              </>
             )}
           </button>
         </div>
