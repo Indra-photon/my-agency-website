@@ -293,7 +293,7 @@ const WebsiteAnalyzer = () => {
             ) : (
               <>
                 <Search size={16} />
-                <span>Analyze Site</span>
+                <span>Analyze your Site</span>
               </>
             )}
           </button>

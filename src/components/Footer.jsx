@@ -93,12 +93,11 @@ const Footer = () => {
                 <Phone size={16} className="text-blue-400" />
                 <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">
                   +91 7384178159 <br />
-                  +48 794231051
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={16} className="text-blue-400" />
-                <span>Adama Mickiewicza 6/8, Torun, 87-100, Poland</span>
+                <span>Kolkata, West Bengal, India</span>
               </li>
             </ul>
           </div>

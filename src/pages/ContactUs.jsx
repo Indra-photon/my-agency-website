@@ -81,7 +81,6 @@ const ContactUs = () => {
                     <p className="text-gray-400">Phone</p>
                     <a href="tel:+917384178159" className="text-white hover:text-blue-400 transition-colors">
                       +91 7384178159 <br />
-                      +48 794231051
                       
                     </a>
                   </div>
@@ -94,7 +93,7 @@ const ContactUs = () => {
                   <div>
                     <p className="text-gray-400">Location</p>
                     <p className="text-white">
-                      Adama Mickiewicza 6/8, Torun, 87-100, Poland
+                    Kolkata, West Bengal, India
                     </p>
                   </div>
                 </div>

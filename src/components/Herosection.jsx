@@ -39,10 +39,10 @@ const HeroSection = () => {
 
         {/* Website analyzer form */}
         <div className="max-w-2xl mx-auto mb-8">
-          <WebsiteAnalyzer />
-          <p className="text-gray-500 text-sm mt-2 text-center">
-            Get a free analysis of your website's performance, SEO, and best practices
+          <p className="text-gray-100 text-xl mt-2 text-center">
+            Get a <span className="text-blue-400 text-2xl">FREE</span> analysis of your website's performance, SEO, and best practices
           </p>
+          <WebsiteAnalyzer />
         </div>
 
         {/* CTA buttons */}
