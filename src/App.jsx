@@ -21,8 +21,6 @@ function App() {
         <Route path = '/contact-us' element = {<ContactUs />} />
         <Route path = '/video-upload' element = {<VideoUploadAdmin />} />
         <Route path = '/photo-upload' element = {<PhotoUploadAdmin />} />
-
-
       </Routes>
       <Footer />
     </>
