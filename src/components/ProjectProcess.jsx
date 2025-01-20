@@ -79,7 +79,7 @@ const ProjectProcess = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center w-full">
+        <div className="text-center">
           <div className="inline-flex items-center gap-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
             <Mail className="text-blue-400" size={24} />
             <div className="text-left">
