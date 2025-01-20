@@ -7,12 +7,14 @@ import ProjectProcess from '../components/ProjectProcess'
 
 function Home() {
   return (
-    <div>
+    <div className='w-full'>
+      <section>
         <HeroSection />
         <ServiceCards />
         <LogoSlider />
         <ProjectProcess />
         <Testimonials />
+      </section>
     </div>
   )
 }
