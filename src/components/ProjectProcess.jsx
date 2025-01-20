@@ -79,27 +79,34 @@ const ProjectProcess = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
-            <Mail className="text-blue-400" size={24} />
-            <div className="text-left">
-              <h4 className="text-white font-semibold">Ready to Begin?</h4>
-              <p className="text-gray-400">
-                Email us at{' '}
-                <a 
-                  href="mailto:your@email.com" 
-                  className="text-blue-400 hover:underline"
-                >
-                  devdoots.dev@gmail.com
-                </a>
-              </p>
+        <div className="text-center px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
+            {/* Left section with icon and text */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <div className="w-12 h-12 flex items-center justify-center bg-blue-500/10 rounded-lg">
+                <Mail className="text-blue-400" size={24} />
+              </div>
+              <div className="text-center sm:text-left">
+                <h4 className="text-white font-semibold text-xl mb-1">Ready to Begin?</h4>
+                <p className="text-gray-400">
+                  Email us at{' '}
+                  <a 
+                    href="mailto:devdoots.dev@gmail.com" 
+                    className="text-blue-400 hover:underline break-all sm:break-normal"
+                  >
+                    devdoots.dev@gmail.com
+                  </a>
+                </p>
+              </div>
             </div>
-            <div>
-            <Link to = '/contact-us'>
-            <button className="ml-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
-              Contact Now
-            </button>
-            </Link>
+
+            {/* Right section with button */}
+            <div className="w-full sm:w-auto">
+              <Link to='/contact-us' className="block">
+                <button className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                  Contact Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
