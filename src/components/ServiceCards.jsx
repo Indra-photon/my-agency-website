@@ -10,6 +10,12 @@ const ServiceCards = () => {
       features: ["Responsive Design", "Custom CMS", "E-commerce Solutions"]
     },
     {
+      title: "SEO Optimization",
+      icon: Search,
+      description: "Data-driven SEO strategies to boost your rankings and attract qualified organic traffic.",
+      features: ["Keyword Research", "Technical SEO", "Content Optimization"]
+    },
+    {
       title: "Social Media Marketing",
       icon: Share2,
       description: "Strategic social media campaigns that build engagement and drive real business results.",
@@ -21,24 +27,18 @@ const ServiceCards = () => {
       description: "Strategic social media posts regularly on different platforms to bring your audinece.",
       features: ["Attractive Content Design", "Content Management", "Regular Data Driven Posting"]
     },
-    {
-      title: "SEO Optimization",
-      icon: Search,
-      description: "Data-driven SEO strategies to boost your rankings and attract qualified organic traffic.",
-      features: ["Keyword Research", "Technical SEO", "Content Optimization"]
-    },
     // {
     //   title: "Product Photography",
     //   icon: Camera,
     //   description: "Professional product photography that makes your offerings stand out in the digital marketplace.",
     //   features: ["Studio Photography", "Lifestyle Shots", "360° Product Views"]
     // },
-    {
-      title: "Viral UGC Ads",
-      icon: Sparkles,
-      description: "Authentic user-generated content that resonates with your audience and drives engagement.",
-      features: ["Creative Direction", "UGC Creation", "Campaign Management"]
-    }
+    // {
+    //   title: "Viral UGC Ads",
+    //   icon: Sparkles,
+    //   description: "Authentic user-generated content that resonates with your audience and drives engagement.",
+    //   features: ["Creative Direction", "UGC Creation", "Campaign Management"]
+    // }
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);

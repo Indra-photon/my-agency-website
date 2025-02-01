@@ -32,7 +32,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-gray-400 text-xl text-center max-w-3xl mx-auto mb-12">
+        <p className="hidden sm:block text-gray-400 text-xl text-center max-w-3xl mx-auto mb-12">
           Transform your online presence with our expert web development and 
           social media management services.
         </p>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
-  // Testimonial data - you can move this to a separate data file
   const testimonials = [
     {
       id: 1,
@@ -11,7 +10,7 @@ const Testimonials = () => {
       company: "TechStart Inc",
       content: "Their web development work transformed our online presence. The attention to detail and commitment to excellence is outstanding.",
       rating: 5,
-      image: "/path-to-image.jpg" // Add actual image path
+      image: "/path-to-image.jpg"
     },
     {
       id: 2,
@@ -51,7 +50,6 @@ const Testimonials = () => {
     }
   ];
 
-  // Duplicate testimonials for seamless infinite scroll
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
@@ -70,9 +68,9 @@ const Testimonials = () => {
 
       {/* Testimonial Slider */}
       <div className="relative w-full">
-        {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        {/* Gradient Overlays - Hidden on mobile */}
+        <div className="hidden md:block absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+        <div className="hidden md:block absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
 
         {/* Sliding Container */}
         <div className="flex animate-scroll-left py-8">
@@ -126,6 +124,13 @@ const Testimonials = () => {
 
         .animate-scroll-left {
           animation: scroll-left 40s linear infinite;
+        }
+
+        /* Mobile-specific animation speed */
+        @media (max-width: 768px) {
+          .animate-scroll-left {
+            animation: scroll-left 10s linear infinite;
+          }
         }
 
         .animate-scroll-left:hover {
