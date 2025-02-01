@@ -4,7 +4,7 @@ import ServiceCards from '../components/ServiceCards'
 import LogoSlider from '../components/LogoSlider'
 import Testimonials from '../components/Testimonials'
 import ProjectProcess from '../components/ProjectProcess'
-import FAQSection from '../components/FAQsection'
+import FAQ from '../components/FAQ'
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
         <LogoSlider />
         <ProjectProcess />
         <Testimonials />
-        <FAQSection />
+        <FAQ />
       </section>
     </div>
   )

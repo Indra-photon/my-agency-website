@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
-const FAQSection = () => {
+const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
@@ -80,4 +80,4 @@ const FAQSection = () => {
     );
 };
 
-export default FAQSection;
+export default FAQ;
